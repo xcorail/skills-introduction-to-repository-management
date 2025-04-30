@@ -4,11 +4,11 @@ As you settle into the teachers' lounge with your coffee, you realize something:
 
 Every codebase, no matter how well-maintained, will eventually face security challenges. Let's try to proactively prepare for that day by configuring a few tools GitHub offers:
 
-1. **Dependabot** - Track and create alerts for vulnerabilities found in upstream code like our python and javascript libraries.
+1. **Dependabot** - Track and create alerts for vulnerabilities found in upstream dependencies used in your project, and keep your dependencies up-to-date with automated pull requests upgrading to safe versions.
 
-1. **Code Scanning** - Identify dangerous coding patterns that can cause vulnerabilities.
+1. **Code Scanning** - Analyze the code in your repository to find security vulnerabilities and coding errors. GitHub Copilot Autofix will suggest fixes for these alerts, allowing developers to prevent and reduce vulnerabilities with less effort
 
-1. **Security Policy** - A clear policy helps users know how to report security vulnerabilities responsibly. This prevents sensitive issues from being publicly disclosed before they're fixed.
+1. **Security Policy and Private vulnerability reporting** - A clear policy helps users know how to report security vulnerabilities responsibly. This prevents sensitive issues from being publicly disclosed before they're fixed. Private vulnerability reporting makes it easy for security researchers to report vulnerabilities directly to the repository maintainer using a simple form.
 
 > [!NOTE]
 > This is just a quick setup guide. For a more detailed setup of each service, we recommend the related GitHub Skills exercises and/or GitHub documentation.
@@ -70,7 +70,13 @@ None of us at the high school are professional software developers. Let's enable
 
 ## ⌨️ Activity: Provide a safe path for security findings
 
-Now that the automated options are ready, let's create a guide for real-life humans to report any security vulnerabilities they find in a safe way.
+Now that the automated options are ready, let's create a guide for real-life humans to report any security vulnerabilities they find in a safe way. Let's enable the Private Vulnerability Reporting feature that allows reporters to send you details privately, and allows you to create a private fork to fix the issue, in collaboration with the reporter if you want.
+
+1. In the top navigation, select the **Settings** tab.
+
+1. In the left navigation, select **Code Security**.
+
+1. Find the **Private vulnerability reporting** section, and click on "Enable".
 
 1. At the top navigation, return to the **Code** tab. Ensure you are on the `prepare-to-collaborate` branch.
 
@@ -87,7 +93,7 @@ Now that the automated options are ready, let's create a guide for real-life hum
    since it contains student information. If you discover a security vulnerability, please follow these steps:
 
    1. **Do not** disclose the vulnerability publicly or to other teachers/students
-   2. Email the IT Club faculty advisor at techsupport@mergingtonhigh.example.edu with details about the vulnerability
+   2. Use the **Private vulnerability reporting** feature [accessible via the **Security** panel of our repository](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability#privately-reporting-a-security-vulnerability), OR email the IT Club faculty advisor at techsupport@mergingtonhigh.example.edu with details about the vulnerability
    3. Include the following information:
       - A description of the vulnerability
       - Steps to reproduce the issue
@@ -100,6 +106,7 @@ Now that the automated options are ready, let's create a guide for real-life hum
    - We will provide an initial assessment within 5 school days
    - Critical issues affecting student data will be addressed immediately
    - We will keep you informed about our progress in resolving the issue
+   - If you used the Private vulnerability reporting, we will create a private fork to solve the issue and invite you as a collaborator so you can see our progress and contribute.
 
    ## Thank You
 
