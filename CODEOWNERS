@@ -1,0 +1,7 @@
+# Core functionality - changes here should be rare!
+/src/app.py                   @xcorail
+/src/backend/database.py      @xcorail
+/src/backend/routers/auth.py  @xcorail
+
+# The frontend will need refactored soon to be more object oriented.
+/src/static/   @xcorail
